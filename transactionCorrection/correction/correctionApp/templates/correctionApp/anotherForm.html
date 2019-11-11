@@ -1,0 +1,36 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <form>
+                {% csrf_token %}
+                <div class="form-group multiple-form-group" data-max=3>
+                    <label>Multiple inputs (with data-max=3)</label>
+
+                    <div class="form-group input-group">
+                        <input type="text" name="multiple[]" class="form-control">
+                        <span class="input-group-btn"><button type="button" class="btn btn-default btn-add">+
+						</button></span>
+                    </div>
+                </div>
+                <div class="form-group multiple-form-group">
+                    <label>Multiple selects</label>
+
+                    <div class="form-group input-group">
+                        <select name="multiple[]" class="form-control">
+                            <option value="">Default select</option>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                        </select>
+                        <span class="input-group-btn"><button type="button" class="btn btn-default btn-add">+
+						</button></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
